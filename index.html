@@ -1,205 +1,171 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Drużyna Koszykarska</title>
+    <title>Vitalii Kulynych</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f0f0f0;
         }
 
         header {
-         background-image: url('pobrane.jpg'); 
-            background-size: cover;
-            background-position: center;>
-            color: white;
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
             text-align: center;
-            padding: 20px;
         }
 
         nav {
             background-color: #444;
+            text-align: center;
             padding: 10px;
         }
 
-        nav ul {
-            list-style-type: none;
-            padding: 0;
-            margin: 0;
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 10px;
+        }
+
+        section {
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+        }
+
+        table {
+            width: 80%;
+            margin: 0 auto;
+            border-collapse: collapse;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        th, td {
+            padding: 10px;
             text-align: center;
         }
 
-        nav ul li {
-            display: inline;
-            margin-right: 20px;
+        th {
+            background-color: #3498db;
+            color: white;
         }
 
-        nav ul li:last-child {
-            margin-right: 0;
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
         }
 
-        .main-content {
-            max-width: 1200px;
-            margin: 20px auto;
-            padding: 20px;
-            background-color: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        tr:nth-child(odd) {
+            background-color: #e5e5e5;
         }
 
-        h1 {
-            font-size: 32px;
-            margin-bottom: 20px;
+        td:first-child {
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
         }
 
-        p {
-            font-size: 18px;
-            line-height: 1.6;
+        td:last-child {
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
         }
 
-        .image-gallery {
+        #video-container {
             display: flex;
+            justify-content: space-around;
             flex-wrap: wrap;
-            justify-content: space-between;
+            margin-top: 20px;
         }
 
-        .image-gallery img {
-            max-width: 30%;
-            margin-bottom: 20px;
+        .video {
+            margin: 10px;
+            flex-basis: calc(50% - 20px);
         }
-        .styled-table {
-    border-collapse: collapse;
-    width: 100%;
-    max-width: 800px;
-    margin: 20px auto;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
 
-.styled-table th,
-.styled-table td {
-    padding: 10px;
-    text-align: center;
-}
+        iframe {
+            width: 100%;
+            height: 315px;
+        }
 
-.styled-table thead {
-    background-color: #333;
-    color: white;
-}
+        #image-container {
+            text-align: center;
+            margin-top: 20px;
+        }
 
-.styled-table tbody tr:nth-child(odd) {
-    background-color: #f2f2f2;
-}
+        #image-container img {
+            width: 560px;
+            height: 315px;
+        }
 
-.styled-table tbody tr:nth-child(even) {
-    background-color: #ddd;
-}
+        /* Styl dla kontenera z audio */
+        .center-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin-top: 20px;
+        }
 
-.styled-table th,
-.styled-table td {
-    border: 1px solid #ccc;
-}
+        /* Styl dla audio */
+        .center-container audio {
+            margin-top: 20px;
+        }
     </style>
 </head>
 <body>
-    <header>
-        <h1> Drużyna Koszykarska CHICAGO BULLS</h1>
-    </header>
-    <nav>
-        <ul>
-            <li><a href="https://www.nba.com/bulls/">Strona główna</a></li>
-            <li><a href="https://www.youtube.com/watch?v=HD0gn9Xjiss">O drużynie</a></li>
-            <li><a href="https://www.flashscore.pl/druzyna/chicago-bulls/bPjc49q0/sklad/">Skład drużyny</a></li>
-            <li><a href="https://www.flashscore.pl/druzyna/chicago-bulls/bPjc49q0/mecze/">Terminarz</a></li>
-            <li><a href="https://www.nba.com/bulls/videos">Galeria</a></li>
-            <li><a href="https://shop.bulls.com/?_s=bm-Bulls-teamsite-nav">Sklep</a></li>
-        </ul>
-    </nav>
-    <div class="main-content">
-        <section>
-            <h1>O naszej drużynie</h1>
-            <p>Chicago Bulls to amerykański klub koszykarski uczestniczący w rozgrywkach ligi NBA (Dywizja Centralna w Konferencji Wschodniej). Bulls sześciokrotnie wygrywali mistrzostwo NBA (w latach 1991–1993 oraz 1996-1998). We wszystkich mistrzowskich sezonach w zespole występowali Michael Jordan i Scottie Pippen, a trenerem był Phil Jackson.</p>
-        </section>
-        <section>
-            <h1>Skład drużyny</h1>
-            <table class="styled-table">
-                <thead>
-                    <tr>
-                        <th>Zawodnik</th>
-                        <th>Pozycja</th>
-                        <th>Data urodzenia</th>
-                        <th>Czego lubie</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td rowspan="1" >Patrick Williams</td>
-                        <td rowspan="2" >Niski skrzydłowy</td>
-                        <td>26 sierpnia 2001</td>
-                        <td>Grać osobno</td>
-                    </tr>
-                    <tr>
-                        <td>Marko Simonović</td>
-                        <td>30 maja 1986</td>
-                        <td>Grać osobno</td>
-                    </tr>
-                    <td>Javonte Green</td>
-                        <td>Rzucający obrońca</td>
-                        <td>23 lipca 2001</td>
-                        <td rowspan="4" >Pić piwko</td>
-                    </tr>
-                    <td>Coby White</td>
-                        <td>Rozgrywający</td>
-                        <td>16 lutego 2000</td>
-                    </tr>
-                    <td>DeMar Darnell DeRozan</td>
-                        <td>Rzucający obrońca</td>
-                        <td>7 sierpnia 1989</td>
-                    </tr>
-                    <td>Carlik Anthony Jones</td>
-                        <td>Rozgrywający</td>
-                        <td>23 grudnia 1997</td>
-                    </tr> <!-- Dodaj więcej informacji o zawodnikach tutaj -->
-                </tbody>
-            </table>
-        <section>
-            <h1>Galeria</h1>
-            <div class="image-gallery">
-               <div class="player-info">
-                <img src="zdjęcie1.png" alt="Zdjęcie 1">
-                <h2>Patrick Williams</h2>
-                <p>Patrick Williams(ur. 26 sierpnia 2001 w Charlotte) to amerykański koszykarz, występujący na pozycji niskiego skrzydłowego, obecnie zawodnik Chicago Bulls. W 2019 wystąpił w meczu gwiazd amerykańskich szkół średnich Jordan Brand Classic.</p>
-                </div>   
-                <div class="player-info">
-                    <img src="zdjecie2.png" alt="Zdjęcie 2">
-                    <h2>Coby White</h2>
-                    <p>Alec Jacoby "Coby" White (ur. 16 lutego 2000 w Goldsboro) to amerykański koszykarz, występujący na pozycji rozgrywającego, obecnie zawodnik Chicago Bulls. W 2018 wystąpił w meczach gwiazd amerykańskich szkół średnich to Jordan Brand Classic i McDonald's All-American[1]. Został też wybrany najlepszym zawodnikiem szkół średnich stanu Karolina Północna (North Carolina Mr. Basketball, North Carolina Gatorade Player of the Year - także w 2017)</p>
-                    </div>  
-                    <div class="player-info">
-                        <img src="zdjecie3.png" alt="Zdjęcie 3">
-                        <h2>Javonte Green</h2>
-                        <p>Javonte Green (ur. 23 lipca 1993 w Petersburgu) – amerykański koszykarz występujący na pozycjach rzucającego obrońcy lub niskiego skrzydłowego, posiadający także czarnogórskie obywatelstwo, aktualnie zawodnik Chicago Bulls.</p>
-                    </div> 
-                    <div class="player-info">
-                        <img src="zdjecie4.png" alt="Zdjęcie 4">
-                        <h2>Marko Simonović</h2>
-                        <p>Marko Simonović (cyr. Марко Симоновић, ur. 30 maja 1986 w Prisztinie) – serbski koszykarz występujący na pozycji niskiego skrzydłowego, reprezentant kraju, wicemistrz olimpijski i świata, po zakończeniu kariery zawodniczej trener koszykarski, obecnie asystent trenera w klubie Crvena Zvezda.</p>
-                    </div> 
-                    <div class="player-info">
-                        <img src="zdjecie5.png" alt="Zdjęcie 5">
-                        <h2>DeMar Darnell DeRozan</h2>
-                        <p>DeMar Darnell DeRozan (ur. 7 sierpnia 1989 w Compton) – amerykański koszykarz, występujący na pozycji rzucającego obrońcy, czterokrotny uczestnik meczu gwiazd NBA, zdobywca największej ilości punktów w historii Toronto Raptors, obecnie zawodnik Chicago Bulls.</p>
-                    </div> 
-                    <div class="player-info">
-                        <img src="zdjecie5.png" alt="Zdjęcie 5">
-                        <h2>Carlik Anthony Jones</h2>
-                        <p>Carlik Anthony Jones (ur. 23 grudnia 1997 w Cincinnati) – amerykański koszykarz, występujący na pozycji rozgrywającego, obecnie zawodnik Chicago Bulls. 1 stycznia 2022 zawarł 10-dniową umowę z Denver Nuggets[1]. 11 stycznia 2022 powrócił do składu Texas Legends[2]. 16 grudnia 2022 podpisał kontrakt z Chicago Bulls na występy zarówno w NBA, jak i zespole G-League – Windy City Bulls</p>
-            </div>
-        </section>
-    </div>  
+</head>
+<body>
+    <h1>Witam sora na mojej kozackiej stronie!</h1>
+    <h2>Moje ulubione piosenki</h2>
+    <table border ="1">
+        <thead>
+            <tr>
+                <th>Gatunek</th>
+                <th>Tytuł pieśni</th>
+                <th>Rok uznania</th>
+                <th>Ocena (w skali od 1 do 10)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td rowspan="3">Pieśń narodowa</td>
+                <td>My , pierwsza brygada</td>
+                <td>2007</td>
+                <td>100</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <section id="video-container">
+        <div class="video">
+            <iframe width="560" height="315" src="https://www.youtube.com/watch?v=-xN5aXpH_mo" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="video">
+            <iframe width="560" height="315" src="https://www.youtube.com/watch?v=d8s_oRV74NU" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </section>
+
+    <iframe src="https://www.facebook.com/100038756511179/videos/1039629600784403/" width="560" height="315" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allowFullScreen="true"></iframe>
+
+    <br>
+    <div id="image-container">
+        <img src="1.png" alt="Obrazek" width="560" height="315">
+    </div>
+
+    <audio id="audio-player" controls autoplay>
+        <source src="Pis.mp3" type="audio/mpeg">
+        Twoja przeglądarka nie obsługuje odtwarzacza audio.
+    </audio>
+  <footer>
+        <p>© 2023 Vitalii Kulynych</p>
+        <p>Data: <span id="currentDate"></span></p>
+    </footer> 
 </body>
 </html>
