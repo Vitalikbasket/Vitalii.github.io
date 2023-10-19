@@ -1,171 +1,55 @@
 <!DOCTYPE html>
-<html lang="pl">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vitalii Kulynych</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-        }
-
-        header {
-            background-color: #333;
-            color: #fff;
-            padding: 10px;
-            text-align: center;
-        }
-
-        nav {
-            background-color: #444;
-            text-align: center;
-            padding: 10px;
-        }
-
-        nav a {
-            color: #fff;
-            text-decoration: none;
-            margin: 10px;
-        }
-
-        section {
-            padding: 20px;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        footer {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            padding: 10px;
-        }
-
-        table {
-            width: 80%;
-            margin: 0 auto;
-            border-collapse: collapse;
-            border-radius: 10px;
+            margin: 0;
+            padding: 0;
             overflow: hidden;
         }
 
-        th, td {
-            padding: 10px;
-            text-align: center;
-        }
-
-        th {
-            background-color: #3498db;
-            color: white;
-        }
-
-        tr:nth-child(even) {
-            background-color: #f2f2f2;
-        }
-
-        tr:nth-child(odd) {
-            background-color: #e5e5e5;
-        }
-
-        td:first-child {
-            border-top-left-radius: 10px;
-            border-bottom-left-radius: 10px;
-        }
-
-        td:last-child {
-            border-top-right-radius: 10px;
-            border-bottom-right-radius: 10px;
-        }
-
-        #video-container {
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-            margin-top: 20px;
-        }
-
-        .video {
-            margin: 10px;
-            flex-basis: calc(50% - 20px);
-        }
-
-        iframe {
+        #video-background {
+            position: fixed;
+            top: 0;
+            left: 0;
             width: 100%;
-            height: 315px;
+            height: 100%;
+            z-index: -1;
         }
 
-        #image-container {
-            text-align: center;
-            margin-top: 20px;
+        #content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
         }
 
-        #image-container img {
-            width: 560px;
-            height: 315px;
+        #content img {
+            display: block;
+            margin: 0 auto;
         }
 
-        /* Styl dla kontenera z audio */
-        .center-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            margin-top: 20px;
-        }
-
-        /* Styl dla audio */
-        .center-container audio {
-            margin-top: 20px;
+        img {
+            width: 800px;
+            height: 800px;
         }
     </style>
 </head>
 <body>
-    <header> 
-    <h1>Witam sora na mojej kozackiej stronie!</h1>
-    </header>
-     <section>
-    <h2>Moje ulubione piosenki</h2>
-    <table border="1">
-        <thead>
-            <tr>
-                <th>Gatunek</th>
-                <th>Tytuł pieśni</th>
-                <th>Rok uznania</th>
-                <th>Ocena (w skali od 1 do 10)</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td rowspan="3">Pieśń narodowa</td>
-                <td>My , pierwsza brygada</td>
-                <td>2007</td>
-                <td>100</td>
-            </tr>
-        </tbody>
-    </table>
-<section id="video-container">
-        <div class="video">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/N4RGAb9_Ch8?si=iXdz2U-cjPiaBRVP" frameborder="0" allowfullscreen></iframe>
-        </div>
-        <div class="video">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/zcthXb-KTLk?si=Y5f_4tfp52q4m-o8" frameborder="0" allowfullscreen></iframe>
-        </div>
-    </section>
+    <video class="video-background" autoplay loop muted>
+        <source src="animacja1.mp4" type="video/mp4">
+    </video>
 
-    <iframe src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2F100038756511179%2Fvideos%2F292735276844825%2F&show_text=false&width=267&t=0" width="560" height="315" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allowFullScreen="true"></iframe>
-
-    <br>
-    <div id="image-container">
-        <img src="1.png" alt="Obrazek" width="560" height="315">
+    <div id="content">
+        <img src="tlo.jpg" alt="Obraz" usemap="#candlemap">
     </div>
 
-    <audio id="audio-player" controls autoplay>
-        <source src="pik.mp3" type="audio/mpeg">
-        Twoja przeglądarka nie obsługuje odtwarzacza audio.
-    </audio>
-  <footer>
-        <p>© 2023 Vitalii Kulynych</p>
-        <p>Data: <span id="currentDate"></span></p>
-    </footer> 
+    <map name="candlemap">
+        <area shape="rect" coords="56,53,116,117" href="https://www.tapeteos.pl/details.php?image_id=65735&big=1" alt="Świeczka 1">
+        <area shape="circle" coords="339,81,70" href="https://www.tapeteos.pl/details.php?image_id=66842&big=1" alt="Świeczka 2">
+        <area shape="poly" coords="139,314,197,267,237,301,225,369,153,361" href="https://www.tapeteos.pl/details.php?image_id=66840&big=1" alt="Świeczka 3">
+    </map>
 </body>
+</html>
+    
 </html>
