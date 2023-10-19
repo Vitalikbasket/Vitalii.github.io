@@ -1,1 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
 
+        #video-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
+        #content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        #content img {
+            display: block;
+            margin: 0 auto;
+        }
+
+        img {
+            width: 800px;
+            height: 800px;
+        }
+    </style>
+</head>
+<body>
+    <video class="video-background" autoplay loop muted>
+        <source src="animacja1.mp4" type="video/mp4">
+    </video>
+
+    <div id="content">
+        <img src="tlo.jpg" alt="Obraz" usemap="#candlemap">
+    </div>
+
+    <map name="candlemap">
+        <area shape="rect" coords="56,53,116,117" href="https://www.tapeteos.pl/details.php?image_id=65735&big=1" alt="Świeczka 1">
+        <area shape="circle" coords="339,81,70" href="https://www.tapeteos.pl/details.php?image_id=66842&big=1" alt="Świeczka 2">
+        <area shape="poly" coords="139,314,197,267,237,301,225,369,153,361" href="https://www.tapeteos.pl/details.php?image_id=66840&big=1" alt="Świeczka 3">
+    </map>
+</body>
+</html>
+    
