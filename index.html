@@ -1,151 +1,99 @@
 <!DOCTYPE html>
-<html>
+<html lang="pl">
 <head>
-    <title>Rejestracja na Koncert "Nazwa Wykonawcy"</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moja Strona</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-image: url('GGG.jpg'); /* Dodaj link do obrazu tła  */
-            background-size: cover;
-            background-repeat: no-repeat;
-            position: relative;
+            margin: 0;
+            padding: 0;
         }
-        .container {
-            width: 50%;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: rgba(105, 82, 82, 0.8); /* Dodaj tło formularza z przezroczystością */
-            border-radius: 10px;
-        }
-        .form-group {
-            margin-bottom: 15px;
-        }
-        label {
-            font-weight: bold;
-        }
-        select, input[type="text"], input[type="email"] {
+        .kontener {
             width: 100%;
-            padding: 10px;
-            margin: 5px 0;
-            border: 1px solid #ccc;
-            border-radius: 5px;
+            margin: 0 auto;
+            background-color: #fff; /* Domyślny kolor tła */
+            color: #000; /* Domyślny kolor tekstu */
         }
-        select[multiple] {
-            height: 100px;
+        .naglowek {
+            background-color: blue; /* Kolor niebieski dla nagłówka */
+            color: #fff; /* Kolor tekstu na niebieskim tle */
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
-        input[type="checkbox"] {
-            margin-right: 5px;
+        .naglowek .logo img {
+            height: 50px; /* Przykładowa wysokość logo */
         }
-        .btn {
-            background-color: #007bff;
-            color: #fff;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
+        .naglowek .menu ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
         }
-        .logo {
-            position: absolute;
-            top: 10px;
-            left: 10px;
+        .naglowek .menu ul li {
+            margin-right: 20px;
         }
-        .logo2 {
-            position: absolute;
-            top: 10px;
-            right: 10px;
+        .naglowek .menu ul li:last-child {
+            margin-right: 0;
         }
-        .audio-player {
-            margin-top: 20px;
+        .naglowek .menu ul li a {
+            color: #fff; /* Kolor tekstu w menu */
+            text-decoration: none;
+        }
+        .baner {
+            background-color: green; /* Kolor zielony dla banera */
+            padding: 20px;
+        }
+        .blok-glowny {
+            background-color: red; /* Kolor czerwony dla głównego bloku */
+            color: #fff; /* Kolor tekstu w głównym bloku */
+            padding: 20px;
+        }
+        .stopka {
+            background-color: red; /* Kolor czerwony dla stopki */
+            color: #fff; /* Kolor tekstu w stopce */
+            padding: 20px;
+            text-align: center;
         }
     </style>
 </head>
 <body>
-    <a class="logo" href="https://www.youtube.com/watch?v=TENnGuVFWjA" target="_blank">
-        <img src="logo.jpg" alt="Logo 1" width="200">
-    </a>
-    <a class="logo2" href="https://youtu.be/j9aXHDOBvaU?si=EPnUAJ1J4ttYdatE" target="_blank">
-        <img src="logo2.jpg" alt="Logo 2" width="200">
-    </a>
-    <div class="container">
-        <h2>Rejestracja na Koncert "Nazwa Wykonawcy"</h2>
-        <form action="mailto:twoj@email.com" method="post" enctype="text/plain">
-            <div class="form-group">
-                <label for="imie">Podaj Imię:</label>
-                <input type="text" id="imie" name="imie" required>
-            </div>
-            <div class="form-group">
-                <label for="nazwisko">Podaj Nazwisko:</label>
-                <input type="text" id="nazwisko" name="nazwisko" required>
-            </div>
-            <div class="form-group">
-                <label for="email">Podaj email:</label>
-                <input type="email" id="email" name="email" required>
-            </div>
-            <div class="form-group">
-                <label for="wiek">Wpisanie wieku:</label>
-                <input type="number" id="wiek" name="wiek" required>
-            </div>
-            <div class="form-group">
-                <label for="data">Wybór daty koncertu:</label>
-                <select id="data" name="data" required>
-                    <option value="2023-11-01">1 listopada 2023</option>
-                    <option value="2023-11-15">15 listopada 2023</option>
-                    <option value="2023-11-30">30 listopada 2023</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label for="piosenki">Wybór piosenek:</label>
-                <select id="piosenki" name="piosenki[]" multiple required>
-                    <option value="piosenka1">Dziewczyna Blondyna</option>
-                    <option value="piosenka2">Dizel</option>
-                    <option value="piosenka3">Plastikowa Biedronka</option>
-                    <option value="piosenka4">Wybuchowa</option>
-                    <option value="piosenka5">Dziewczyno nie zmieniaj się</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label>Co chcesz zjeść/wypić:</label>
-                <input type="checkbox" id="pizza" name="jedzenie[]" value="Pizza">
-                <label for="pizza">Pizza</label>
-                <input type="checkbox" id="burger" name="jedzenie[]" value="Burger">
-                <label for="burger">Burger</label>
-                <input type="checkbox" id="nagets" name="jedzenie[]" value="Nagets">
-                <label for="nagets">Nagets</label>
-                <input type="checkbox" id="piwo_zimne" name="jedzenie[]" value="Piwo zimne">
-                <label for="piwo_zimne">Piwo zimne</label>
-                <input type="checkbox" id="whisky" name="jedzenie[]" value="Whisky">
-                <label for="whisky">Whisky</label>
-            </div>
-            <div class="form-group">
-                <label>Usługi dodatkowe:</label>
-                <input type="checkbox" id="wyciszenie_zony" name="usluga[]" value="Wyciszenie żony">
-                <label for="wyciszenie_zony">Wyciszenie żony</label>
-                <input type="checkbox" id="zamiana_partnerki" name="usluga[]" value="Zamiana partnerki">
-                <label for="zamiana_partnerki">Zamiana partnerki</label>
-                <input type="checkbox" id="zdjecie_z_zespolem" name="usluga[]" value="Zdjęcie z zespołem">
-                <label for="zdjecie_z_zespołem">Zdjęcie z zespołem</label>
-                <!-- Dodaj inne opcje jedzenia/wypicia oraz usługi dodatkowe -->
-            </div>
-            <div class="form-group">
-                <label for="zgoda">Zgoda na przetwarzanie danych:</label>
-                <input type="checkbox" id="zgoda" name="zgoda" required>
-            </div>
-            <div class="form-group">
-                <label for="telefon">Numer telefonu komórkowego:</label>
-                <input type="tel" id="telefon" name="telefon" required>
-            </div>
-            <div class="form-group">
-                <p>Prosimy o kontakt w razie potrzeby.</p>
-                <div class="form-group">
-                    <p>Numer kontaktowy to 998887776.</p>
-            </div>
-            <button type="submit" class="btn">Zarejestruj się</button>
-            <div class="audio-player">
-                <audio controls autoplay>
-                    <source src="pis (2).mp3" type="audio/mpeg">
-                    Twoja przeglądarka nie obsługuje elementu audio.
-                </audio>
-        </form>
-    </div>
+
+<div class="kontener">
+    <header class="naglowek">
+        <div class="logo">
+            <!-- Tutaj wstaw kod dla logo -->
+            <img src="zdjecie6.png" alt="Logo Strony">
+        </div>
+        <nav class="menu">
+            <!-- Tutaj wstaw kod dla menu nawigacyjnego -->
+            <ul>
+                <li><a href="#">Strona główna</a></li>
+                <li><a href="#">O nas</a></li>
+                <li><a href="#">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="baner">
+        <!-- Tutaj wstaw kod dla banera -->
+        <img src="111.jpg" alt="Baner promocyjny">
+    </section>
+
+    <section class="blok-glowny">
+        <!-- Tutaj wstaw kod dla głównego bloku treści -->
+        <h2>Główna Treść</h2>
+        <p>Praca samodzielna na lekcji z Sorem Sałachem.</p>
+    </section>
+</div>
+
+<footer class="stopka">
+    <!-- Tutaj wstaw kod dla stopki -->
+    <p>© 2024 Moja Strona. Wszelkie prawa zastrzeżone.</p>
+</footer>
+
 </body>
 </html>
+
