@@ -3,14 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kalkulator</title>
+    <title>Kalkulator Dodawania</title>
 </head>
 <body>
-    <h1>Prosty Kalkulator</h1>
-    <form id="calculatorForm">
-        <input type="text" id="inputVariable" placeholder="Wprowadź liczbę">
-        <button type="button" onclick="calculate()">Oblicz</button>
-    </form>
+    <label for="inputNumber1">Liczba 1:</label>
+    <input type="text" id="inputNumber1"><br>
+
+    <label for="inputNumber2">Liczba 2:</label>
+    <input type="text" id="inputNumber2"><br>
+
+    <button onclick="calculate()">Oblicz</button>
+
     <div id="result"></div>
 
     <script src="gry.js"></script>

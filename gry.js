@@ -1,16 +1,11 @@
-// Skrypt do obliczeń
 function calculate() {
-    const inputElement = document.getElementById('inputVariable');
-    const inputValue = parseFloat(inputElement.value); // Pobranie wartości z pola tekstowego
+    // Pobierz wartości z pól tekstowych
+    const number1 = parseInt(document.getElementById('inputNumber1').value);
+    const number2 = parseInt(document.getElementById('inputNumber2').value);
 
-    if (!isNaN(inputValue)) {
-        // Przykładowe obliczenie (pomnożenie przez 2)
-        const result = inputValue * 2;
+    // Wykonaj operację dodawania
+    const result = number1 + number2;
 
-        // Wyświetlenie wyniku w divie
-        const resultElement = document.getElementById('result');
-        resultElement.innerText = `Wynik: ${result}`;
-    } else {
-        alert('Wprowadź poprawną liczbę!');
-    }
+    // Wyświetl wynik w divie
+    document.getElementById('result').innerText = `Wynik: ${result}`;
 }
