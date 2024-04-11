@@ -1,99 +1,18 @@
 <!DOCTYPE html>
-<html lang="pl">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Moja Strona</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-        }
-        .kontener {
-            width: 100%;
-            margin: 0 auto;
-            background-color: #fff; /* Domyślny kolor tła */
-            color: #000; /* Domyślny kolor tekstu */
-        }
-        .naglowek {
-            background-color: blue; /* Kolor niebieski dla nagłówka */
-            color: #fff; /* Kolor tekstu na niebieskim tle */
-            padding: 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .naglowek .logo img {
-            height: 50px; /* Przykładowa wysokość logo */
-        }
-        .naglowek .menu ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            display: flex;
-        }
-        .naglowek .menu ul li {
-            margin-right: 20px;
-        }
-        .naglowek .menu ul li:last-child {
-            margin-right: 0;
-        }
-        .naglowek .menu ul li a {
-            color: #fff; /* Kolor tekstu w menu */
-            text-decoration: none;
-        }
-        .baner {
-            background-color: green; /* Kolor zielony dla banera */
-            padding: 20px;
-        }
-        .blok-glowny {
-            background-color: red; /* Kolor czerwony dla głównego bloku */
-            color: #fff; /* Kolor tekstu w głównym bloku */
-            padding: 20px;
-        }
-        .stopka {
-            background-color: red; /* Kolor czerwony dla stopki */
-            color: #fff; /* Kolor tekstu w stopce */
-            padding: 20px;
-            text-align: center;
-        }
-    </style>
+    <title>Kalkulator</title>
 </head>
 <body>
+    <h1>Prosty Kalkulator</h1>
+    <form id="calculatorForm">
+        <input type="text" id="inputVariable" placeholder="Wprowadź liczbę">
+        <button type="button" onclick="calculate()">Oblicz</button>
+    </form>
+    <div id="result"></div>
 
-<div class="kontener">
-    <header class="naglowek">
-        <div class="logo">
-            <!-- Tutaj wstaw kod dla logo -->
-            <img src="zdjecie6.png" alt="Logo Strony">
-        </div>
-        <nav class="menu">
-            <!-- Tutaj wstaw kod dla menu nawigacyjnego -->
-            <ul>
-                <li><a href="#">Strona główna</a></li>
-                <li><a href="#">O nas</a></li>
-                <li><a href="#">Kontakt</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <section class="baner">
-        <!-- Tutaj wstaw kod dla banera -->
-        <img src="111.jpg" alt="Baner promocyjny">
-    </section>
-
-    <section class="blok-glowny">
-        <!-- Tutaj wstaw kod dla głównego bloku treści -->
-        <h2>Główna Treść</h2>
-        <p>Praca samodzielna na lekcji z Sorem Sałachem.</p>
-    </section>
-</div>
-
-<footer class="stopka">
-    <!-- Tutaj wstaw kod dla stopki -->
-    <p>© 2024 Moja Strona. Wszelkie prawa zastrzeżone.</p>
-</footer>
-
+    <script src="gry.js"></script>
 </body>
 </html>
-
