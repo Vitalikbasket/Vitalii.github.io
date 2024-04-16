@@ -3,19 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kalkulator Dodawania</title>
+    <title>Ocena Wiedzy</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+        h1 {
+            font-size: 24px;
+        }
+        #result {
+            border: 2px solid red;
+            padding: 30px;
+            font-size: 24px;
+            color: orange;
+        }
+    </style>
 </head>
 <body>
-    <label for="inputNumber1">Liczba 1:</label>
-    <input type="text" id="inputNumber1"><br>
-
-    <label for="inputNumber2">Liczba 2:</label>
-    <input type="text" id="inputNumber2"><br>
-
-    <button onclick="calculate()">Oblicz</button>
-
+    <h1>Pytanie jak oceniasz swoją wiedzę?</h1>
+    <input type="number" id="userInput" placeholder="Podaj procent wiedzy">
+    <button onclick="checkKnowledge()">Sprawdź mnie</button>
     <div id="result"></div>
 
-    <script src="gry.js"></script>
+    <script>
+        function checkKnowledge() {
+            const userInput = parseFloat(document.getElementById('userInput').value);
+            let rating;
+
+            if (userInput === 100) {
+                rating = 6;
+            } else if (userInput >= 90) {
+                rating = 5;
+            } else if (userInput >= 75) {
+                rating = 4;
+            } else if (userInput >= 50) {
+                rating = 3;
+            } else if (userInput >= 30) {
+                rating = 2;
+            } else {
+                rating = 1;
+            }
+
+            const resultDiv = document.getElementById('result');
+            resultDiv.textContent = `Twoja ocena: ${rating}`;
+        }
+    </script>
 </body>
 </html>
