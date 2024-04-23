@@ -6,29 +6,29 @@
     <title>Ocena Wiedzy</title>
     <style>
         body {
-            background-color: black;
-            color: white;
+            background-color: rgb(0, 0, 0);
+            color: rgb(9, 46, 94);
             font-family: Arial, sans-serif;
         }
         h1 {
-            font-size: 24px;
+            font-size: 50px;
         }
         #result {
-            border: 2px solid red;
+            border: 2px solid rgb(168, 90, 44);
             padding: 30px;
             font-size: 24px;
-            color: orange;
+            color: rgba(134, 96, 24, 0.466);
         }
     </style>
 </head>
 <body>
     <h1>Pytanie jak oceniasz swoją wiedzę?</h1>
     <input type="number" id="userInput" placeholder="Podaj procent wiedzy">
-    <button onclick="checkKnowledge()">Sprawdź mnie</button>
+    <button onclick="oblicz()">Sprawdź czy dobrze zrobiłem</button>
     <div id="result"></div>
 
     <script>
-        function checkKnowledge() {
+        function oblicz() {
             const userInput = parseFloat(document.getElementById('userInput').value);
             let rating;
 
