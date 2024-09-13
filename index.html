@@ -1,54 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ocena Wiedzy</title>
-    <style>
-        body {
-            background-color: rgb(0, 0, 0);
-            color: rgb(9, 46, 94);
-            font-family: Arial,     ;
-        }
-        h1 {
-            font-size: 50px;
-        }
-        #result {
-            border: 2px solid rgb(168, 90, 44);
-            padding: 30px;
-            font-size: 24px;
-            color: rgba(134, 96, 24, 0.466);
-        }
-    </style>
+    <title>Tablica Cennik</title>
 </head>
+<link rel = "stylesheet" href =styles.css
 <body>
-    <h1>Pytanie jak oceniasz swoją wiedzę?</h1>
-    <input type="number" id="userInput" placeholder="Podaj procent wiedzy">
-    <button onclick="oblicz()">Sprawdź czy dobrze zrobiłem</button>
-    <div id="result"></div>
-
-    <script>
-        function oblicz() {
-            const userInput = parseFloat(document.getElementById('userInput').value);
-            let rating;
-
-            if (userInput === 100) {
-                rating = 6;
-            } else if (userInput >= 90) {
-                rating = 5;
-            } else if (userInput >= 75) {
-                rating = 4;
-            } else if (userInput >= 50) {
-                rating = 3;
-            } else if (userInput >= 30) {
-                rating = 2;
-            } else {
-                rating = 1;
-            }
-
-            const resultDiv = document.getElementById('result');
-            resultDiv.textContent = `Twoja ocena: ${rating}`;
-        }
-    </script>
+    <table>
+        <caption>Tablica 1.</caption>
+        <tr>
+            <th>Długość włosów</th>
+            <th>Cena</th>
+        </tr>
+        <tr>
+            <td>Krótkie</td>
+            <td>25</td>
+        </tr>
+        <tr>
+            <td>Średnie</td>
+            <td>30</td>
+        </tr>
+        <tr>
+            <td>Półdługie</td>
+            <td>40</td>
+        </tr>
+        <tr>
+            <td>Długie</td>
+            <td>50</td>
+        </tr>
+    </table>
 </body>
 </html>
