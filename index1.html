@@ -1,54 +1,29 @@
 <!DOCTYPE html>
-<html>
+<html lang="pl">
 <head>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            overflow: hidden;
-        }
-
-        #video-background {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-        }
-
-        #content {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
-
-        #content img {
-            display: block;
-            margin: 0 auto;
-        }
-
-        img {
-            width: 800px;
-            height: 800px;
-        }
-    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prosta Tabela z colspan</title>
 </head>
 <body>
-    <video class="video-background" autoplay loop muted>
-        <source src="animacja1.mp4" type="video/mp4">
-    </video>
-
-    <div id="content">
-        <img src="tlo.jpg" alt="Obraz" usemap="#candlemap">
-    </div>
-
-    <map name="candlemap">
-        <area shape="rect" coords="56,53,116,117" href="https://www.tapeteos.pl/details.php?image_id=65735&big=1" alt="Świeczka 1">
-        <area shape="circle" coords="339,81,70" href="https://www.tapeteos.pl/details.php?image_id=66842&big=1" alt="Świeczka 2">
-        <area shape="poly" coords="139,314,197,267,237,301,225,369,153,361" href="https://www.tapeteos.pl/details.php?image_id=66840&big=1" alt="Świeczka 3">
-    </map>
+    <table border="1" cellpadding="10">
+        <tr>
+            <td>Komórka 1</td>
+            <td>Komórka 2</td>
+            <td>Komórka 3</td>
+            <td>Komórka 4</td>
+        </tr>
+        <tr>
+            <td>Komórka 5</td>
+            <td colspan="2">Połączone komórki (colspan 2)</td>
+            <td>Komórka 6</td>
+        </tr>
+        <tr>
+            <td>Komórka 7</td>
+            <td>Komórka 8</td>
+            <td>Komórka 9</td>
+            <td>Komórka 10</td>
+        </tr>
+    </table>
 </body>
 </html>
-    
